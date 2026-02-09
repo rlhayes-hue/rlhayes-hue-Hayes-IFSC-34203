@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Learning New Things..</title>
+<link rel="stylesheet" href="path-to-style.css">
+<meta name="description" content=Creating New Codes." />
+<meta name="author" content="Ronnikukica Hayes" />
+<link rel="shortcut icon" href="/favicon.ico" />
+</head>
+<body>
+<div class="container">
+  <div id="header">
+    <h1>Codes help you Learn...</h1>
+    <h2>HTML5</h2>
+    <div id="navigation">
+      <ul>
+        <li><a href="#">Pre-assessment</a></li>
+        <li><a href="#">Assignment 1</a></li>
+        <li><a href="#">Assignment 2</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="content">
+    <div id="primary">
+      <div class="post">
+        <p class="post-date">January 28, 2025</p>
+        <h1> <a href="#" rel="bookmark" title="link to this post">Mobile Web Develpoment</a> </h1>
+        <p></p>
+        <h2></h2>
+        <p></p>
+        <ul>
+          <li></li>
+          <li>.</li>
+          <li></li>
+        </ul>
+        <div class="post-meta"> </div>
+      </div>
+    </div>
+    <!--#primary -->
+    <div id="secondary">
+      <div class="widget">
+        <h1> </h1>
+        <p><a href="#">Read More</a>&raquo;</p>
+      </div>
+      <div class="widget">
+        <h1> </h1>
+        <p> <a href="#">Read More</a>&raquo;</p>
+      </div>
+      <div class="widget">
+        <h1> </h1>
+        <p> <a href="#">Read More</a>&raquo;</p>
+      </div>
+    </div>
+    <!--#secondary --> 
+  </div>
+  <!--#content -->
+  <div id="colophon">
+    <p>&copy; 2025 <a href="#">Ronnikukica Hayes</a></p>
+  </div>
+</div>
+<!--.container -->
+</body>
+</html>
