@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Exercise</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffeaf4;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto;
+            gap: 10px;
+            min-height: 100vh;
+        }
+
+        header {
+            grid-column: 1 / 4;
+            background: #ffb6d5;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #ffd6e8;
+            padding: 15px;
+        }
+
+        main {
+            background: white;
+            padding: 20px;
+        }
+
+        aside {
+            background: #ffd6e8;
+            padding: 15px;
+        }
+
+        footer {
+            grid-column: 1 / 4;
+            background: #ffb6d5;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            header, footer {
+                grid-column: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <header>
+        <h1>💖 CSS Grid Layout 💖</h1>
+    </header>
+
+    <nav>
+        <h3>Navigation</h3>
+        <p>Links go here</p>
+    </nav>
+
+    <main>
+        <h2>Main Content</h2>
+        <p>This layout is built using CSS Grid.</p>
+    </main>
+
+    <aside>
+        <h3>Sidebar</h3>
+        <p>Extra info here</p>
+    </aside>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+</div>
+
+</body>
+</html>
