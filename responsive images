@@ -1,1 +1,70 @@
 
+screenshot 2026-04-25 175744.jpg
+screenshot 2026-04-25 175455 turret.jpg
+// Controls turret behavior
+export class Turret {
+    constructor(player) {
+        this.player = player;
+        this.cooldown = 0;
+    }
+
+    update(deltaTime) {
+        if (this.cooldown > 0) {
+            this.cooldown -= deltaTime;
+        }
+    }
+
+    activate() {
+        if (this.cooldown <= 0) {
+            this.fireProjectile("forward");
+            this.cooldown = 0.5;
+        }
+    }
+
+    activateLow() {
+        if (this.cooldown <= 0) {
+            this.fireProjectile("low");
+            this.cooldown = 0.5;
+        }
+    }
+
+    fireProjectile(direction) {
+        console.log(`Firing ${direction} shot`);
+        // spawn projectile logic here
+    }
+}
+
+screenshot 2026-04-25 175231 stand.jpg
+// Handles idle/standing behavior
+export function stand(player) {
+    player.velocity.x = 0;
+
+    if (player.input.left) {
+        player.setState("move");
+    }
+
+    if (player.input.down) {
+        player.setState("sit");
+    }
+
+    if (player.input.fire) {
+        player.turret.activate();
+    }
+
+    player.playAnimation("stand");
+}
+screenshot 2026-04-25 175046 sit.jpg
+// Handles crouch/sitting behavior
+export function sit(player) {
+    player.velocity.x = 0;
+
+    if (!player.input.down) {
+        player.setState("stand");
+    }
+
+    if (player.input.fire) {
+        player.turret.activateLow();
+    }
+
+    player.playAnimation("sit");
+}
