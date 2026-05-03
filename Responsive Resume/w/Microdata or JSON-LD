@@ -1,1 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Resume</title>
 
+  <!-- JSON-LD STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Your Full Name",
+    "jobTitle": "Warehouse Logistics Specialist & Forklift Trainer",
+    "description": "Experienced logistics professional with over 56 years in warehouse operations, including 36 years at L’Oréal (Maybelline) and 20+ years as a certified forklift operator and trainer.",
+    "telephone": "555-555-5555",
+    "email": "your@email.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Arkansas",
+      "addressCountry": "USA"
+    },
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "L’Oréal (Maybelline Division)",
+        "startDate": "1989",
+        "description": "Inventory management, order picking, stocking, production support, and large-scale warehouse operations."
+      },
+      {
+        "@type": "Organization",
+        "name": "Warehouse & Logistics Operations",
+        "description": "Forklift operation and certified training specialist with focus on safety, efficiency, and workforce training."
+      }
+    ],
+    "knowsAbout": [
+      "Forklift Operation",
+      "Forklift Training",
+      "Warehouse Safety",
+      "Inventory Control",
+      "Order Fulfillment",
+      "Stock Management",
+      "Production Support",
+      "Logistics Coordination"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ---------------- BASE ---------------- */
+    html {
+      box-sizing: border-box;
+    }
+
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to right, #ffd6e8, #ffeaf4);
+      color: #4a2c3b;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #c2185b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      background: #ff99c8;
+      color: white;
+      padding: 3px 6px;
+      border-radius: 6px;
+    }
+
+    /* ---------------- HEADER ---------------- */
+    header {
+      background: #ffcce0;
+      text-align: center;
+      padding: 20px;
+      border-bottom: 3px solid #ff99c8;
+    }
+
+    h1 {
+      margin: 0;
+      color: #d63384;
+      font-size: 2rem;
+    }
+
+    /* ---------------- LAYOUT ---------------- */
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #c2185b;
+      border-bottom: 2px solid #ffd6e8;
+      padding-bottom: 5px;
+    }
+
+    /* ---------------- BIO ---------------- */
+    .bio {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .bio img {
+      width: 180px;
+      border-radius: 12px;
+    }
+
+    /* ---------------- DETAILS ---------------- */
+    dl {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px 15px;
+      margin-top: 15px;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    /* ---------------- EXPERIENCE ---------------- */
+    .job {
+      margin-bottom: 20px;
+    }
+
+    .job h3 {
+      margin-bottom: 5px;
+      color: #a10f57;
+    }
+
+    /* ---------------- SKILLS ---------------- */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #ffd6e8;
+      display: inline-block;
+      margin: 5px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #ffcce0;
+      border-top: 3px solid #ff99c8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>💖 Professional Resume 💖</h1>
+</header>
+
+<main itemscope itemtype="https://schema.org/Person">
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>Professional Summary</h2>
+
+    <div class="bio">
+      <img itemprop="image" src="https://placehold.co/600x600?text=Headshot" alt="Professional Headshot">
+
+      <p itemprop="description">
+        Highly experienced logistics and warehouse professional with over 56 years of combined experience in industrial operations. Specialized in high-volume inventory control, forklift operation, production support, and training. Known for precision, dependability, and leadership in warehouse safety and efficiency. Includes 36 years at L’Oréal (Maybelline) and over 20 years as a certified forklift operator and trainer.
+      </p>
+    </div>
+
+    <dl>
+      <dt>Name</dt>
+      <dd itemprop="name">Your Full Name</dd>
+
+      <dt>Location</dt>
+      <dd itemprop="homeLocation">Arkansas, USA</dd>
+
+      <dt>Phone</dt>
+      <dd><a itemprop="telephone" href="tel:5555555555">555-555-5555</a></dd>
+
+      <dt>Email</dt>
+      <dd><a itemprop="email" href="mailto:your@email.com">your@email.com</a></dd>
+    </dl>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Core Skills</h2>
+    <ul>
+      <li itemprop="knowsAbout">Forklift Operation</li>
+      <li itemprop="knowsAbout">Forklift Training</li>
+      <li itemprop="knowsAbout">Inventory Control</li>
+      <li itemprop="knowsAbout">Order Picking</li>
+      <li itemprop="knowsAbout">Stock Management</li>
+      <li itemprop="knowsAbout">Production Support</li>
+      <li itemprop="knowsAbout">Warehouse Safety</li>
+      <li itemprop="knowsAbout">Logistics Coordination</li>
+    </ul>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Professional Experience</h2>
+
+    <div class="job">
+      <h3>Warehouse Logistics Specialist</h3>
+      <p><strong>L’Oréal (Maybelline Division)</strong> | 1989 – Present</p>
+      <p>
+        Responsible for large-scale inventory operations including order fulfillment, stocking, supply chain support, and production workflow coordination in a high-volume cosmetics manufacturing environment.
+      </p>
+    </div>
+
+    <div class="job">
+      <h3>Forklift Operator & Trainer</h3>
+      <p><strong>Industrial Warehouse Operations</strong> | 20+ Years</p>
+      <p>
+        Operated forklifts in fast-paced warehouse environments and trained new employees on equipment safety, operational efficiency, and OSHA compliance standards.
+      </p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Training & Certifications</h2>
+
+    <p>Forklift Certification (OSHA-Aligned)</p>
+    <p>Warehouse Safety & Operations Training</p>
+    <p>Ongoing Professional Development in Logistics</p>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Your Name | <a href="#top">Back to Top</a>
+</footer>
+
+</body>
+</html>
