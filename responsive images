@@ -68,3 +68,36 @@ export function sit(player) {
 
     player.playAnimation("sit");
 }
+import { stand } from "./playerStates/stand.js";
+import { sit } from "./playerStates/sit.js";
+import { Turret } from "./systems/turret.js";
+
+class Player {
+    constructor() {
+        this.state = "stand";
+        this.velocity = { x: 0, y: 0 };
+        this.input = {};
+        this.turret = new Turret(this);
+    }
+
+    setState(newState) {
+        this.state = newState;
+    }
+
+    update(deltaTime) {
+        this.turret.update(deltaTime);
+
+        switch (this.state) {
+            case "stand":
+                stand(this);
+                break;
+            case "sit":
+                sit(this);
+                break;
+        }
+    }
+
+    playAnimation(name) {
+        console.log(`Playing animation: ${name}`);
+    }
+}
