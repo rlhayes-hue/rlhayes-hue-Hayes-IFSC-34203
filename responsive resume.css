@@ -1,95 +1,119 @@
-/* ================================
-   TAP-FRIENDLY MOBILE RESUME
-================================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ronnikukica Hayes Resume</title>
 
-html {
-  box-sizing: border-box;
+<style>
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --bg: #f3f3f3;
+  --pink: #ffd6e8;
+  --hotpink: #c2185b;
+  --text: #222;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+/* =========================
+   RESET
+========================= */
+* {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(to right, #ffd6e8, #ffeaf4);
-  color: #4a2c3b;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.6;
 }
 
-/* ================= NAVIGATION (STICKY) ================= */
-
-nav.primary {
+/* =========================
+   TAP-FRIENDLY NAV (FLEXBOX)
+========================= */
+nav {
   position: sticky;
   top: 0;
-  background: #ffcce0;
+  background: var(--pink);
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  border-bottom: 2px solid #ff99c8;
   z-index: 1000;
+  flex-wrap: wrap;
 }
 
-nav.primary a {
-  padding: 12px 14px;
+nav a {
+  text-decoration: none;
   background: white;
+  padding: 12px;
   border-radius: 10px;
-  font-weight: bold;
-  color: #c2185b;
   min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
+  color: var(--hotpink);
 }
 
-/* ================= HEADER ================= */
-
-header {
-  text-align: center;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 1.6rem;
-  color: #d63384;
-}
-
-/* ================= SECTIONS AS CARDS ================= */
-
+/* =========================
+   LAYOUT (GRID)
+========================= */
 main {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
   padding: 10px;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "about"
+    "skills"
+    "experience"
+    "education";
+  gap: 15px;
 }
 
+/* =========================
+   SECTIONS
+========================= */
 section {
   background: white;
-  margin: 15px 0;
   padding: 15px;
   border-radius: 16px;
   box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
-/* ================= BIO ================= */
+h1 {
+  text-align: center;
+  color: var(--hotpink);
+}
 
+h2 {
+  color: var(--hotpink);
+}
+
+/* =========================
+   BIO (FLEXBOX)
+========================= */
 .bio {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
   gap: 10px;
 }
 
 .bio img {
   width: 140px;
-  height: auto;
   border-radius: 12px;
-  margin: auto;
-  border: 3px solid #ff99c8;
+  border: 3px solid var(--pink);
 }
 
-/* ================= CONTACT ================= */
-
+/* =========================
+   CONTACT GRID
+========================= */
 dl {
   display: grid;
   grid-template-columns: 1fr;
@@ -98,56 +122,171 @@ dl {
 
 dt {
   font-weight: bold;
-  color: #a10f57;
+  color: var(--hotpink);
 }
 
-/* ================= SKILLS (TOUCH CHIPS) ================= */
-
-ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
+/* =========================
+   SKILLS (FLEXBOX TILES)
+========================= */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
+  padding: 0;
 }
 
-ul li {
-  background: #ffd6e8;
-  padding: 14px;
-  border-radius: 12px;
+#skills li {
+  list-style: none;
+  background: var(--pink);
+  padding: 12px;
+  border-radius: 10px;
+  flex: 1 1 140px;
   text-align: center;
-  font-size: 1rem;
   min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ================= EXPERIENCE ================= */
-
+/* =========================
+   JOBS
+========================= */
 .job {
-  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 
-.job h3 {
-  color: #a10f57;
-  margin-bottom: 5px;
+/* =========================
+   MOBILE (DEFAULT)
+========================= */
+.page-title {
+  grid-area: title;
 }
 
-/* ================= TAP BUTTON LINKS ================= */
+#about { grid-area: about; }
+#skills { grid-area: skills; }
+#experience { grid-area: experience; }
+#education { grid-area: education; }
 
-a {
-  text-decoration: none;
-  color: #c2185b;
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px) {
+
+  main {
+    grid-template-areas:
+      "title title"
+      "about about"
+      "skills experience"
+      "education education";
+  }
+
+  .bio {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  dl {
+    grid-template-columns: 120px 1fr;
+  }
 }
 
-a:active {
-  transform: scale(0.98);
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 992px) {
+  main {
+    max-width: 1200px;
+  }
 }
+</style>
+</head>
 
-/* ================= FOOTER ================= */
+<body>
 
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #ffcce0;
-}
+<!-- NAV (TAP FRIENDLY) -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+</nav>
+
+<main>
+
+<!-- TITLE -->
+<h1 class="page-title">Ronnikukica Hayes</h1>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>Professional Summary</h2>
+
+  <div class="bio">
+    <img src="https://placehold.co/300x300?text=Photo" alt="Ronnikukica Hayes">
+
+    <p>
+      Experienced warehouse and logistics professional with over 35 years at L’Oréal (Maybelline Division) since 1989. Skilled in manufacturing support, inventory control, supply handling, order picking, and production operations. Over 20 years of forklift experience with strong focus on safety and efficiency.
+    </p>
+  </div>
+
+  <dl>
+    <dt>Name</dt>
+    <dd>Ronnikukica Hayes</dd>
+
+    <dt>Address</dt>
+    <dd>14016 Chesterfield Cir, North Little Rock, AR 72117</dd>
+
+    <dt>Phone</dt>
+    <dd>501-773-0773</dd>
+
+    <dt>Email</dt>
+    <dd>rlhayes@ualr.edu</dd>
+  </dl>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li>Forklift Operation (20+ Years)</li>
+    <li>Warehouse Safety</li>
+    <li>Inventory Control</li>
+    <li>Order Picking</li>
+    <li>Manufacturing Support</li>
+    <li>Production Flow</li>
+    <li>Supply Management</li>
+    <li>Logistics Operations</li>
+  </ul>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="job">
+    <h3>L’Oréal (Maybelline Division)</h3>
+    <p>1989 – Present</p>
+    <p>
+      Warehouse operations including inventory management, production support, stocking, order picking, and supply chain coordination.
+    </p>
+  </div>
+
+  <div class="job">
+    <h3>Forklift Operator & Trainer</h3>
+    <p>
+      Over 20 years operating forklifts in industrial warehouse environments with training responsibilities and OSHA safety compliance.
+    </p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <h2>Education & Training</h2>
+  <p>Forklift Certification (OSHA Standards)</p>
+  <p>Warehouse Safety Training</p>
+</section>
+
+</main>
+
+</body>
+</html>
