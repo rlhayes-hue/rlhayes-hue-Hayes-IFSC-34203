@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Homepage</title>
 
+  <style>
+    /* --------------------------------------------------
+       BOX SIZING RESET
+    -------------------------------------------------- */
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    /* --------------------------------------------------
+       PAGE STYLES
+    -------------------------------------------------- */
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #ffd6e8, #ffeaf4);
+      color: #4a2c3b;
+    }
+
+    header {
+      background: #ffcce0;
+      text-align: center;
+      padding: 20px;
+      border-bottom: 3px solid #ff99c8;
+    }
+
+    h1 {
+      margin: 0;
+      color: #d63384;
+    }
+
+    /* --------------------------------------------------
+       GRID SYSTEM (from Codecast)
+    -------------------------------------------------- */
+
+    div.row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .col {
+      border-radius: 10px;
+      background-color: #ffb6d5;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .col:nth-child(odd) {
+      background-color: #ffcfe3;
+    }
+
+    .col p {
+      margin: 0;
+      color: #4a2c3b;
+    }
+
+    /* Links */
+    a {
+      color: #c2185b;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background: #ff99c8;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    /* --------------------------------------------------
+       MEDIA QUERIES
+    -------------------------------------------------- */
+
+    /* Mobile */
+    @media screen and (max-width: 600px) {
+      div.row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Tablet */
+    @media screen and (max-width: 800px) and (min-width: 601px) {
+      div.row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Desktop tweak */
+    @media screen and (min-width: 801px) {
+      .col:nth-child(odd) {
+        background-color: #ff99c8;
+      }
+    }
+
+    /* Optional hidden element */
+    .fancy {
+      display: none;
+    }
+
+    /* Retina support */
+    @media
+    only screen and (-webkit-min-device-pixel-ratio: 1.25),
+    only screen and (min--moz-device-pixel-ratio: 1.25),
+    only screen and (-o-min-device-pixel-ratio: 1.25/1),
+    only screen and (min-device-pixel-ratio: 1.25),
+    only screen and (min-resolution: 200dpi),
+    only screen and (min-resolution: 1.25dppx) {
+      .fancy {
+        display: block;
+        text-align: center;
+        color: #d63384;
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>💖 Your Name 💖 Course Homepage</h1>
+</header>
+
+<div class="row">
+
+  <div class="col">
+    <p><a href="#">Preassessment</a></p>
+  </div>
+
+  <div class="col">
+    <p><a href="#">Refactored HTML5 Project</a></p>
+  </div>
+
+  <div class="col">
+    <p><a href="css-grid-exercise-1/index.html">CSS Grid Exercise</a></p>
+  </div>
+
+  <div class="col">
+    <p><a href="#">Media Queries Lab</a></p>
+  </div>
+
+</div>
+
+<div class="fancy">
+  ✨ Retina / High Resolution Display Detected ✨
+</div>
+
+</body>
+</html>
