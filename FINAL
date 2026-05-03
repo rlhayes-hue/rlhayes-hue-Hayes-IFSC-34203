@@ -1,1 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forklift Training Academy</title>
 
+<style>
+/* =========================
+   VARIABLES
+========================= */
+:root {
+  --bg: #f5f5f5;
+  --dark: #222;
+  --accent: #ff7a00; /* safety orange */
+  --card: #ffffff;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+/* =========================
+   NAV (FLEXBOX + TAP FRIENDLY)
+========================= */
+nav {
+  position: sticky;
+  top: 0;
+  background: var(--dark);
+  padding: 10px;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: white;
+  background: #333;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  background: var(--accent);
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #ff7a00, #ffb347);
+  color: white;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 10px auto 0;
+}
+
+/* =========================
+   MAIN LAYOUT (GRID)
+========================= */
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px;
+  display: grid;
+  grid-template-areas:
+    "intro"
+    "cards"
+    "info";
+  gap: 15px;
+}
+
+.intro { grid-area: intro; }
+.cards { grid-area: cards; }
+.info { grid-area: info; }
+
+/* =========================
+   CARDS (FLEXBOX)
+========================= */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.card {
+  background: var(--card);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  min-height: 44px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--accent);
+}
+
+/* =========================
+   INFO SECTION
+========================= */
+.info {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--dark);
+  color: white;
+  margin-top: 20px;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (min-width: 768px) {
+
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    flex: 1 1 45%;
+  }
+
+  main {
+    grid-template-areas:
+      "intro intro"
+      "cards cards"
+      "info info";
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 992px) {
+
+  .card {
+    flex: 1 1 30%;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#safety">Safety</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <h1>Forklift Training Academy</h1>
+  <p>Professional forklift certification and warehouse safety training for real-world industrial careers.</p>
+</header>
+
+<!-- MAIN CONTENT -->
+<main>
+
+<section class="intro">
+  <h2>Welcome</h2>
+  <p>
+    We provide hands-on forklift training, warehouse safety education, and certification programs designed to prepare you for real industrial environments.
+  </p>
+</section>
+
+<section class="cards">
+
+  <div class="card">
+    <h3>Forklift Certification</h3>
+    <p>Learn safe operation, controls, and OSHA standards for forklift equipment.</p>
+  </div>
+
+  <div class="card">
+    <h3>Warehouse Safety</h3>
+    <p>Training focused on real-world safety procedures and hazard prevention.</p>
+  </div>
+
+  <div class="card">
+    <h3>Hands-On Training</h3>
+    <p>Practical instruction in loading, unloading, and warehouse operations.</p>
+  </div>
+
+</section>
+
+<section class="info">
+  <h2>Why Choose Us?</h2>
+  <p>
+    Our academy focuses on real industry skills used in logistics, manufacturing, and warehouse environments. Training is designed for beginners and experienced workers.
+  </p>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2026 Forklift Training Academy
+</footer>
+
+</body>
+</html>
