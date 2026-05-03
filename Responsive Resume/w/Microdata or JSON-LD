@@ -10,44 +10,21 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Your Full Name",
+    "name": "Ronnikukica Hayes",
     "jobTitle": "Warehouse Logistics Specialist & Forklift Trainer",
     "description": "Experienced logistics professional with over 56 years in warehouse operations, including 36 years at L’Oréal (Maybelline) and 20+ years as a certified forklift operator and trainer.",
-    "telephone": "555-555-5555",
-    "email": "your@email.com",
+    "telephone": "501-773-0773",
+    "email": "rlhayes@ualr.edu",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Arkansas",
+      "addressLocality": "North Little Rock, Arkansas",
       "addressCountry": "USA"
-    },
-    "worksFor": [
-      {
-        "@type": "Organization",
-        "name": "L’Oréal (Maybelline Division)",
-        "startDate": "1989",
-        "description": "Inventory management, order picking, stocking, production support, and large-scale warehouse operations."
-      },
-      {
-        "@type": "Organization",
-        "name": "Warehouse & Logistics Operations",
-        "description": "Forklift operation and certified training specialist with focus on safety, efficiency, and workforce training."
-      }
-    ],
-    "knowsAbout": [
-      "Forklift Operation",
-      "Forklift Training",
-      "Warehouse Safety",
-      "Inventory Control",
-      "Order Fulfillment",
-      "Stock Management",
-      "Production Support",
-      "Logistics Coordination"
-    ]
+    }
   }
   </script>
 
   <style>
-    /* ---------------- BASE ---------------- */
+    /* ---------------- RESET ---------------- */
     html {
       box-sizing: border-box;
     }
@@ -56,6 +33,7 @@
       box-sizing: inherit;
     }
 
+    /* ---------------- BASE ---------------- */
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
@@ -115,26 +93,43 @@
     /* ---------------- BIO ---------------- */
     .bio {
       display: flex;
-      flex-wrap: wrap;
       gap: 20px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .bio img {
       width: 180px;
+      max-width: 100%;
       border-radius: 12px;
     }
 
     /* ---------------- DETAILS ---------------- */
     dl {
       display: grid;
-      grid-template-columns: 120px 1fr;
+      grid-template-columns: 140px 1fr;
       gap: 8px 15px;
       margin-top: 15px;
     }
 
     dt {
       font-weight: bold;
+    }
+
+    /* ---------------- SKILLS ---------------- */
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    ul li {
+      background: #ffd6e8;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.9rem;
     }
 
     /* ---------------- EXPERIENCE ---------------- */
@@ -147,27 +142,47 @@
       color: #a10f57;
     }
 
-    /* ---------------- SKILLS ---------------- */
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      background: #ffd6e8;
-      display: inline-block;
-      margin: 5px;
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-    }
-
     /* ---------------- FOOTER ---------------- */
     footer {
       text-align: center;
       padding: 15px;
       background: #ffcce0;
       border-top: 3px solid #ff99c8;
+    }
+
+    /* ---------------- RESPONSIVE DESIGN ---------------- */
+
+    /* TABLET */
+    @media (max-width: 900px) {
+      main {
+        padding: 15px;
+      }
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .bio {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      dl {
+        grid-template-columns: 1fr;
+      }
+
+      ul {
+        justify-content: center;
+      }
+
+      ul li {
+        text-align: center;
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -188,22 +203,22 @@
       <img itemprop="image" src="https://placehold.co/600x600?text=Headshot" alt="Professional Headshot">
 
       <p itemprop="description">
-        Highly experienced logistics and warehouse professional with over 56 years of combined experience in industrial operations. Specialized in high-volume inventory control, forklift operation, production support, and training. Known for precision, dependability, and leadership in warehouse safety and efficiency. Includes 36 years at L’Oréal (Maybelline) and over 20 years as a certified forklift operator and trainer.
+        Highly experienced logistics professional with over 56 years of combined warehouse and industrial operations experience. Skilled in forklift operation, training, inventory control, order fulfillment, and production support. Recognized for leadership, precision, and maintaining high safety standards throughout a long-term career at L’Oréal (Maybelline) and in warehouse training environments.
       </p>
     </div>
 
     <dl>
       <dt>Name</dt>
-      <dd itemprop="name">Your Full Name</dd>
+      <dd itemprop="name">Ronnikukica Hayes</dd>
 
       <dt>Location</dt>
-      <dd itemprop="homeLocation">Arkansas, USA</dd>
+      <dd itemprop="homeLocation">North Little Rock, Arkansas, USA</dd>
 
       <dt>Phone</dt>
-      <dd><a itemprop="telephone" href="tel:5555555555">555-555-5555</a></dd>
+      <dd><a itemprop="telephone" href="tel:5017730773">501-773-0773</a></dd>
 
       <dt>Email</dt>
-      <dd><a itemprop="email" href="mailto:your@email.com">your@email.com</a></dd>
+      <dd><a itemprop="email" href="mailto:rlhayes@ualr.edu">rlhayes@ualr.edu</a></dd>
     </dl>
   </section>
 
@@ -230,32 +245,23 @@
       <h3>Warehouse Logistics Specialist</h3>
       <p><strong>L’Oréal (Maybelline Division)</strong> | 1989 – Present</p>
       <p>
-        Responsible for large-scale inventory operations including order fulfillment, stocking, supply chain support, and production workflow coordination in a high-volume cosmetics manufacturing environment.
+        Managed high-volume inventory operations including order picking, stocking, supply chain coordination, and production support in a fast-paced cosmetics manufacturing environment.
       </p>
     </div>
 
     <div class="job">
       <h3>Forklift Operator & Trainer</h3>
-      <p><strong>Industrial Warehouse Operations</strong> | 20+ Years</p>
+      <p><strong>Warehouse Operations</strong> | 20+ Years</p>
       <p>
-        Operated forklifts in fast-paced warehouse environments and trained new employees on equipment safety, operational efficiency, and OSHA compliance standards.
+        Operated forklifts in industrial environments and trained employees in safety procedures, OSHA compliance, and efficient warehouse operations.
       </p>
     </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <h2>Training & Certifications</h2>
-
-    <p>Forklift Certification (OSHA-Aligned)</p>
-    <p>Warehouse Safety & Operations Training</p>
-    <p>Ongoing Professional Development in Logistics</p>
   </section>
 
 </main>
 
 <footer>
-  &copy; 2026 Your Name | <a href="#top">Back to Top</a>
+  &copy; 2026 Ronnikukica Hayes
 </footer>
 
 </body>
