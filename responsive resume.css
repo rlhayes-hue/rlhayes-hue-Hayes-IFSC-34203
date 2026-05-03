@@ -1,1 +1,153 @@
+/* ================================
+   TAP-FRIENDLY MOBILE RESUME
+================================= */
 
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(to right, #ffd6e8, #ffeaf4);
+  color: #4a2c3b;
+  line-height: 1.6;
+}
+
+/* ================= NAVIGATION (STICKY) ================= */
+
+nav.primary {
+  position: sticky;
+  top: 0;
+  background: #ffcce0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom: 2px solid #ff99c8;
+  z-index: 1000;
+}
+
+nav.primary a {
+  padding: 12px 14px;
+  background: white;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #c2185b;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= HEADER ================= */
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: #d63384;
+}
+
+/* ================= SECTIONS AS CARDS ================= */
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+}
+
+section {
+  background: white;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+/* ================= BIO ================= */
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.bio img {
+  width: 140px;
+  height: auto;
+  border-radius: 12px;
+  margin: auto;
+  border: 3px solid #ff99c8;
+}
+
+/* ================= CONTACT ================= */
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+dt {
+  font-weight: bold;
+  color: #a10f57;
+}
+
+/* ================= SKILLS (TOUCH CHIPS) ================= */
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+ul li {
+  background: #ffd6e8;
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= EXPERIENCE ================= */
+
+.job {
+  padding: 10px 0;
+}
+
+.job h3 {
+  color: #a10f57;
+  margin-bottom: 5px;
+}
+
+/* ================= TAP BUTTON LINKS ================= */
+
+a {
+  text-decoration: none;
+  color: #c2185b;
+}
+
+a:active {
+  transform: scale(0.98);
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #ffcce0;
+}
