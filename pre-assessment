@@ -1,1 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Answers</title>
+    <style>
+        /* Page background */
+        body {
+            background-color: #ffe4ec; /* soft pink */
+        }
 
+        /* Style rule for hover effect */
+        a.favorite-link:hover {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Difference Between "alt" and "title" Attributes</h2>
+    <p>
+        The <strong>alt</strong> attribute is used in images to provide alternative text if the image cannot be displayed. 
+        It is also important for accessibility, as screen readers use it to describe the image to visually impaired users.
+    </p>
+    <p>
+        The <strong>title</strong> attribute provides additional information about an element. 
+        It is usually displayed as a tooltip when the user hovers over the element.
+    </p>
+
+    <h2>Dictionary Definition Markup Example</h2>
+    <p>
+        <dfn>HTML</dfn> is defined as:
+    </p>
+    <blockquote>
+        "HyperText Markup Language (HTML) is the standard markup language for creating web pages."
+    </blockquote>
+
+    <h2>Favorite Website Link with Hover Style</h2>
+    <p>
+        Visit my favorite site: 
+        <a href="https://www.wikipedia.org" class="favorite-link" title="Go to Wikipedia">Wikipedia</a>
+    </p>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+</html>
