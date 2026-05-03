@@ -1,1 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Course Homepage</title>
 
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", cursive;
+            background: linear-gradient(to right, #ffd6e8, #ffeaf4);
+            color: #5a3a4a;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ffcce0;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ff99c8;
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 2rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #c2185b;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: #c2185b;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #ffb6d5;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #ffcce0;
+            border-top: 3px solid #ff99c8;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            section {
+                padding: 12px;
+            }
+
+            a {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 768px) {
+            main {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            section.full {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>💖 Your Name Here 💖</h1>
+        <p>Web Design Course Homepage</p>
+    </header>
+
+    <main>
+        <section class="full">
+            <h2>📚 My Work</h2>
+            <ul>
+                <li><a href="#">Preassessment</a></li>
+                <li><a href="#">Refactored HTML5 Assignment</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>✨ About Me ✨</h2>
+            <p>
+                I'm learning web design and building my skills using HTML5 and CSS. 
+                This page is part of my course work and shows my progress.
+            </p>
+        </section>
+
+        <section>
+            <h2>🌸 Goals 🌸</h2>
+            <p>
+                Improve my coding skills, design beautiful websites, and create fun, interactive pages!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>💗 © 2026 Your Name 💗</p>
+    </footer>
+
+</body>
+</html>
