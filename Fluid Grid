@@ -1,1 +1,70 @@
+/*  ---------------Box Sizing-----------------  */
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Starter */
+main > * {
+  font-family: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+  font-weight: normal;
+  background-color: #c0c0c0;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Grid container */
+main {
+  display: grid;
+  gap: 20px;
+  max-width: 80vw;
+  margin: 20px auto;
+
+  grid-template-columns: 2fr 1fr;
+}
+
+/* Header spans full width */
+header.primary {
+  grid-column: 1 / -1;
+}
+
+/* Main content left column */
+#content {
+  grid-column: 1 / 2;
+}
+
+/* Blog right column */
+#blog {
+  grid-column: 2 / 3;
+}
+
+/* Sidebar full width */
+aside {
+  grid-column: 1 / -1;
+}
+
+/* Footer full width */
+footer.primary {
+  grid-column: 1 / -1;
+}
+
+/* ---------------- Responsive Layout ---------------- */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header.primary,
+  #content,
+  #blog,
+  aside,
+  footer.primary {
+    grid-column: 1 / -1;
+  }
+}
